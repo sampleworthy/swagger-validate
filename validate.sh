@@ -19,6 +19,7 @@ do
 		if [[ $file == $YAML_TYPE ]] || [[ $file == $YML_TYPE ]] || [[ $file == $JSON_TYPE ]]; then
 			echo "Validating the $file"
 			swagger-cli validate $file
+			swagger-cli bundle -o $file
 		fi
 	done    
 done
